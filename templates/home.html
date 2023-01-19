@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,8 @@
     <h1>This is my spotify!!!</h1>
     <h2>Albums</h2>
     <p> {% for album in albums %}
-        {{ album.name }} - {{ album.genre}}
+        {{ album.name }} - {{ album.genre}} 
+        <img height="400" width="300" src="{{ album.image.url }}" alt="">
         {% endfor %}</p>
 
     <h2>Songs</h2>

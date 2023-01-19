@@ -4,6 +4,7 @@ class Album(models.Model):
 	title = models.CharField(max_length = 30)
 	artist = models.CharField(max_length = 30)
 	genre = models.CharField(max_length = 30)
+	image = models.ImageField(default="5b7.jpg", upload_to="album_pictures")
 
 	def __str__(self):
 		return self.title
